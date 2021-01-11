@@ -4,11 +4,16 @@ import './styles.css';
 
 type Props = {
   product: Product;
+  isSelected: boolean;
+  onSelectProduct: (product: Product) => void;
 }
 
-function ProductCard({ product }: Props) {
+function ProductCard({ product, isSelected, onSelectProduct }: Props) {
   return (
-    <div className="order-card-container">
+    <div 
+      className={`order-card-container ${isSelected ? 'selected' : ''}`} 
+      onClick={() => onSelectProduct(product)}
+    >
       <h3 className="order-card-title">
         {product.name}
       </h3>

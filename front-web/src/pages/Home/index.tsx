@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import Footer from '../../components/Footer';
 import { ReactComponent as LandingImg } from '../../assets/Landing.svg';
 import './styles.css';
 
@@ -24,7 +23,6 @@ function Home() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
