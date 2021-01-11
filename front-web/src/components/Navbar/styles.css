@@ -1,7 +1,7 @@
 .main-navbar {
   height: 70px;
   padding-left: 45px;
-  background-color: #DA5C5C;
+  background-color: var(--primary-color);
   display: flex;
   align-items: center;
 }
@@ -12,5 +12,5 @@
   font-size: 24px;
   line-height: 33px;
   letter-spacing: -0.015em;
-  color: #FFFFFF;
+  color: var(--light-color);
 }
