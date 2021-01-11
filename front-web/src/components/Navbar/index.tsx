@@ -1,10 +1,10 @@
+import { ReactComponent as LogoIcon } from '../../assets/Logo.svg';
 import './styles.css';
-import { ReactComponent as Logo } from '../../assets/Logo.svg';
 
 function Navbar() {
   return (
     <nav className="main-navbar">
-      <Logo />
+      <LogoIcon />
       <a href="" className="logo-text">
         PHP-Delivery
       </a>
