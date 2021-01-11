@@ -1,0 +1,12 @@
+.orders-list-container {
+  display: flex;
+  justify-content: center;
+}
+
+.orders-list-items {
+  width: 70%;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fill, 235px);
+  grid-gap: 32px 32px;
+}
