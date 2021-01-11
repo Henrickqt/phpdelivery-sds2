@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { fetchProducts } from '../../api';
+import { toast } from 'react-toastify';
+import { fetchProducts, saveOrder } from '../../api';
 import { Location } from '../../types/locationType';
 import { Product } from '../../types/productType';
 import OrderLocation from '../../components/OrderLocation';
@@ -20,7 +21,7 @@ function Orders() {
   useEffect(() => {
     fetchProducts()
       .then(response => setProducts(response.data))
-      .catch(error => console.error(error));
+      .catch(() => toast.warning('Erro ao listar produtos'));
   }, []);
 
   const handleSelectProduct = (product: Product) => {
@@ -34,6 +35,21 @@ function Orders() {
     }
   }
 
+  const handleSubmit = () => {
+    const productsIds = selectedProducts.map(({ id }) => ({ id }));
+    const payload = {
+      ...orderLocation!,
+      products: productsIds
+    }
+  
+    saveOrder(payload)
+      .then((response) => {
+        toast.error(`Pedido nº ${response.data.id} realizado com sucesso!`);
+        setSelectedProducts([]);
+      })
+      .catch(() => toast.warning('Erro ao enviar pedido'));
+  }
+
   return (
     <div className="orders-container">
       <StepsHeader />
@@ -42,8 +58,14 @@ function Orders() {
         selectedProducts={selectedProducts} 
         onSelectProduct={handleSelectProduct} 
       />
-      <OrderLocation onChangeLocation={location => setOrderLocation(location)} />
-      <OrderSummary amount={selectedProducts.length} totalPrice={totalPrice} />
+      <OrderLocation 
+        onChangeLocation={location => setOrderLocation(location)} 
+      />
+      <OrderSummary 
+        amount={selectedProducts.length} 
+        totalPrice={totalPrice} 
+        onSubmit={handleSubmit}
+      />
     </div>
   );
 }
