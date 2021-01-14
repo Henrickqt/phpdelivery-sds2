@@ -21,19 +21,19 @@ const styles = StyleSheet.create({
   },
   
   text: {
+    color: '#9E9E9E',
     fontFamily: 'OpenSans_400Regular',
     fontSize: 14,
     fontWeight: 'normal',
     lineHeight: 19,
-    color: '#9E9E9E',
   },
   
   orderName: {
+    color: '#263238',
     fontFamily: 'OpenSans_700Bold',
     fontSize: 18,
     fontWeight: 'bold',
     lineHeight: 25,
-    color: '#263238',
   },
   
   orderPrice: {
@@ -46,10 +46,10 @@ const styles = StyleSheet.create({
   },
   
   productsList: {
-    marginTop: 15,
-    paddingTop: 15,
     borderTopColor: '#E6E6E6',
     borderTopWidth: 1,
+    marginTop: 15,
+    paddingTop: 15,
   },
 });
 
