@@ -1,16 +1,21 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { ScrollView } from 'react-native';
 
 import Header from '../../components/Header';
+import OrderCard from '../../components/OrderCard';
 import styles from './styles';
 
 function Orders() {
   return (
     <>
       <Header />
-      <View style={styles.container}>
-        <Text>Orders</Text>
-      </View>
+      <ScrollView style={styles.container}>
+        <OrderCard />
+        <OrderCard />
+        <OrderCard />
+        <OrderCard />
+        <OrderCard />
+      </ScrollView>
     </>
   );
 }
