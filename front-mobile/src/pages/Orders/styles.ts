@@ -3,11 +3,11 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: '5%',
+    paddingHorizontal: '4%',
   },
 
-  text: {
-    paddingTop: '15%',
+  loadingText: {
+    paddingTop: '10%',
     color: '#9E9E9E',
     fontFamily: 'OpenSans_400Regular',
     fontSize: 18,

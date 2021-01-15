@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from './pages/Home';
 import Orders from './pages/Orders';
+import OrderDetails from './pages/OrderDetails';
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -12,11 +13,12 @@ function Routes() {
     <NavigationContainer>
       <Navigator headerMode="none" screenOptions={{ 
         cardStyle: { 
-          backgroundColor: '#FFFFFF',
+          backgroundColor: '#F5F5F5',
         },
       }}>
         <Screen name="Home" component={Home} />
         <Screen name="Orders" component={Orders} />
+        <Screen name="OrderDetails" component={OrderDetails} />
       </Navigator>
     </NavigationContainer>
   );
