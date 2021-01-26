@@ -1,6 +1,6 @@
 # PHP-Delivery
 
-!img ......................
+![](https://github.com/Henrickqt/phpdelivery-sds2/blob/main/assets/app.gif)
 
 Sales delivery project, in which the web version is used for customers to place their orders and point out the delivery location, and the mobile version is used by the delivery person to obtain the data of the orders to be delivered and their respective routes.
 
